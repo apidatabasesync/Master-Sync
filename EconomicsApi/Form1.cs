@@ -52,7 +52,8 @@ namespace EconomicsApi
         {
             var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
             session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
-            var name = session2.
+            //DebtorContact_GetDebtor  gets a handle for the debtor of a debtor contact
+            var name = session2.DebtorContact_GetEmail(debtor);
             textBox2.Text = name.Length.ToString();
             session2.Disconnect();
         }
