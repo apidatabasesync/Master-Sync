@@ -7,7 +7,7 @@ using EconSoapLibrary.EconApi;
 
 namespace EconomicsApi
 {
-    static class Program
+    static class Program 
     {
         /// <summary>
         /// The main entry point for the application.
@@ -15,6 +15,7 @@ namespace EconomicsApi
         [STAThread]
         static void Main()
         {
+            Connections session = new Connections("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new UserInterface());

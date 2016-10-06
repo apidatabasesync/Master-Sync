@@ -48,13 +48,15 @@ namespace EconomicsApi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
-            session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
-            DebtorHandle[] debtorHandles = session2.Debtor_GetAll();
-            var name = session2.Debtor_GetEmail(debtorHandles[0]);
-            textBox2.Text = name.get
             
-            
+            //var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
+            //session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
+            //DebtorHandle[] debtorHandles = session2.Debtor_GetAll();
+            //var name = session2.Debtor_GetEmail(debtorHandles[0]);
+            //textBox2.Text = name.Length;
+            //session2.Disconnect();
+
+
 
 
         }
