@@ -34,7 +34,6 @@ namespace EconomicsApi
             //textBox1.Text = "test";
             var session = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
             session.ConnectWithToken("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
-
             var company = session.Company_Get();
             textBox1.Text = company.Number;
             session.Disconnect();
@@ -51,10 +50,12 @@ namespace EconomicsApi
         {
             var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
             session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
-            DebtorHandle d = new DebtorHandle();
-            var name = session2.Debtor_GetEmail(d);
-            textBox2.Text = name.GetType().ToString();
-            session2.Disconnect();
+            DebtorHandle[] debtorHandles = session2.Debtor_GetAll();
+            var name = session2.Debtor_GetEmail(debtorHandles[0]);
+            textBox2.Text = name.get
+            
+            
+
 
         }
 
