@@ -49,16 +49,19 @@ namespace EconomicsApi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EconomicsIntegration test = new EconomicsIntegration("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
-            //var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
-            //session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
-            //DebtorHandle[] debtorHandles = session2.Debtor_GetAll();
-            //var name = session2.Debtor_GetEmail(debtorHandles[0]);
+            //EconomicsIntegration test = new EconomicsIntegration("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
+            var session = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
+            session.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
+            //DebtorHandle[] debtorHandles = session.Debtor_GetAll();
+            //var name = session.Debtor_GetEmail(debtorHandles[0]);
             //textBox2.Text = name.Length;
-            //session2.Disconnect();
-           
+            var test = session.TemplateCollection_GetAll();
+            textBox2.Text = test.ToArray<TemplateCollectionHandle>().ToString();
+            session.Disconnect();
 
-
+            //Debtor_GetAll + Debtor_GetDataArray
+            //Debtor_GetAllUpdated + Debtor_GetDataArray
+            //you can find a list of layout handles by calling TemplateCollection_GetAll.
 
         }
 
