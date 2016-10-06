@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Economic Developers class
+//Most Economic-Developers class
 
 namespace EconomicsApi
 {
