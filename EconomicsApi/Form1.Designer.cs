@@ -1,6 +1,6 @@
 ﻿namespace EconomicsApi
 {
-    partial class emailSync
+    partial class UserInterface
     {
         /// <summary>
         /// Required designer variable.

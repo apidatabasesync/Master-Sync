@@ -12,12 +12,14 @@ using EconSoapLibrary.EconApi;
 
 namespace EconomicsApi
 {
-    public partial class emailSync : Form
+    public partial class UserInterface : Form
     {
-        public emailSync()
+        public UserInterface()
         {
             InitializeComponent();
-
+            //SoapAPIConnection test = new SoapAPIConnection();
+            
+            
            
         }
 
@@ -30,17 +32,14 @@ namespace EconomicsApi
         {
 
             //textBox1.Text = "test";
-
             var session = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
-            session.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
+            session.ConnectWithToken("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
+
             var company = session.Company_Get();
             textBox1.Text = company.Number;
-            //Console.WriteLine(company.Number);
             session.Disconnect();
 
-            
-            
-             
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -52,10 +51,11 @@ namespace EconomicsApi
         {
             var session2 = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
             session2.ConnectWithToken("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
-            //DebtorContact_GetDebtor  gets a handle for the debtor of a debtor contact
-            var name = session2.DebtorContact_GetEmail(debtor);
-            textBox2.Text = name.Length.ToString();
+            DebtorHandle d = new DebtorHandle();
+            var name = session2.Debtor_GetEmail(d);
+            textBox2.Text = name.GetType().ToString();
             session2.Disconnect();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

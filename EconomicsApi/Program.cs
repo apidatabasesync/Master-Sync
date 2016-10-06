@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EconSoapLibrary.EconApi;
 
 namespace EconomicsApi
 {
@@ -16,7 +17,9 @@ namespace EconomicsApi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new emailSync());
+            Application.Run(new UserInterface());
         }
     }
+
 }
+
