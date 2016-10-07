@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connections.cs" />
+    <Compile Include="CreateNewCostumer.cs" />
+    <Compile Include="EcoConnect.cs" />
     <Compile Include="EconomicsConnector.cs" />
     <Compile Include="EconomicsIntegration.cs" />
     <Compile Include="Form1.cs">
@@ -87,7 +89,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

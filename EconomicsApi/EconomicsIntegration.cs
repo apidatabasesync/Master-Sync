@@ -18,9 +18,9 @@ namespace EconomicsApi
         public DebtorHandle[] Debtor_GetAllData()
         {
             return this.session.Debtor_GetAll();
-          
+
         }
-       
-       
+
     }
 }
+    

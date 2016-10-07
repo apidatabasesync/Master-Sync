@@ -70,16 +70,16 @@
             this.textBox2.TabIndex = 3;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // emailSync
+            // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 323);
+            this.ClientSize = new System.Drawing.Size(717, 520);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "emailSync";
+            this.Name = "UserInterface";
             this.Text = "Master Sync";
             this.Load += new System.EventHandler(this.emailSync_Load);
             this.ResumeLayout(false);

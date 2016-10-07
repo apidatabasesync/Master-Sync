@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EconSoapLibrary.EconApi;
 
+
 //This class cointains the GUI
 
 namespace EconomicsApi
@@ -33,11 +34,12 @@ namespace EconomicsApi
         {
 
             //textBox1.Text = "test";
-            var session = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
-            session.ConnectWithToken("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
+            //var session = new EconSoapLibrary.EconApi.EconomicWebServiceSoapClient();
+            //session.ConnectWithToken("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
+            EcoConnect session = new EcoConnect();
             var company = session.Company_Get();
             textBox1.Text = company.Number;
-            session.Disconnect();
+            
 
 
         }
@@ -55,15 +57,34 @@ namespace EconomicsApi
             //DebtorHandle[] debtorHandles = session.Debtor_GetAll();
             //var name = session.Debtor_GetEmail(debtorHandles[0]);
             //textBox2.Text = name.Length;
-            var test = session.TemplateCollection_GetAll();
-            textBox2.Text = test.ToArray<TemplateCollectionHandle>().ToString();
-            session.Disconnect();
+            //var test = session.TemplateCollection_GetAll();
+            //textBox2.Text = test.ToArray<TemplateCollectionHandle>().ToString();
+            //EconomicsIntegration debt = new EconomicsIntegration("bual5TKRrDC9709Ci71cVKCpkMUpYk33nzlxkIfmnl01", "VFMBs45gNtceuBWMKk8EHnY92KNj6Xye838h8252uQU1");
 
+            var debt = session.Debtor_GetAll();
+            
+            
+            
+            
+            
             //Debtor_GetAll + Debtor_GetDataArray
             //Debtor_GetAllUpdated + Debtor_GetDataArray
             //you can find a list of layout handles by calling TemplateCollection_GetAll.
 
+            session.Disconnect();
+
         }
+
+        //string convert(string[] array) {
+        //    StringBuilder str = new StringBuilder();
+        //    foreach (string value in array)
+        //    {
+        //        str.Append(value);
+        //        str.Append(' ');
+
+        //    }
+        //    return str.ToString();
+        //}
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
