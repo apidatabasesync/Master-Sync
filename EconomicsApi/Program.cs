@@ -18,14 +18,14 @@ namespace EconomicsApi
         static void Main()
         {
 
-            EcoConnect session = new EcoConnect();
+           //EconomicsConnector con = new Connections("nfPig4Gnj2shh2D8MnMyu5XRB7KSzBsbDa3MVdv67wI1", "g4pVuB04ZM2h4rIBqMtaDSnHSwWuCepy5BhwMK4LCjQ1");
             
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new UserInterface());
-            session.Discon();
-            
+
+            //con.Dispose();
 
         }
     }
